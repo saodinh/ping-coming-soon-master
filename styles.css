@@ -1,0 +1,253 @@
+:root {
+    --clr-blue-800: hsl(209, 33%, 12%);
+    --clr-blue-600: hsl(223, 87%, 63%);
+    --clr-blue-400: hsl(223, 100%, 88%);
+    --clr-red: hsl(354, 100%, 66%);
+    --clr-gray: hsl(0, 0%, 59%);
+
+    --break-point-1: 700px;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* ===========
+    General
+========== */
+
+body {
+    font-family: "Libre Franklin", sans-serif;
+    text-align: center;
+    font-weight: 300;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ==========
+    Typo
+========= */
+
+.title {
+    font-size: 2.3rem;
+    font-weight: 300;
+    color: var(--clr-gray);
+    margin-bottom: 1.6rem;
+}
+
+.title strong {
+    font-weight: 700;
+    color: black;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 750px) {
+    .title {
+        font-size: 4.8rem;
+    }
+
+    .subtitle {
+        font-size: 2rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+/* =========
+    Layout
+========= */
+
+.container {
+    width: 86%;
+    max-width: 650px;
+    margin: 8.5rem auto 3rem auto;
+}
+
+.img-logo {
+    width: 55px;
+    margin: 0 auto 3.8rem auto;
+}
+
+@media (min-width: 750px) {
+    .img-logo {
+        width: 85px;
+        margin: 0 auto 5rem auto;
+    }
+}
+
+.img-dashboard {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+@media (min-width: 750px) {
+    .img-dashboard {
+        max-width: 100%;
+    }
+}
+/* ===== Form ===== */
+
+.email,
+.btn {
+    display: inline-block;
+    padding: 1.2rem 3rem;
+    border-radius: 999px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    max-width: 400px;
+}
+
+.email {
+    border: 1px solid var(--clr-blue-400);
+    margin-bottom: 1rem;
+    font-family: inherit;
+}
+
+.email:focus {
+    outline: none;
+    box-shadow: 3px 6px 6px hsl(0, 0%, 59%, 0.3);
+}
+
+.btn {
+    border: none;
+    font-family: inherit;
+}
+
+.btn-primary {
+    color: white;
+    background-color: var(--clr-blue-600);
+    margin-bottom: 7rem;
+    box-shadow: 3px 6px 6px hsl(223, 87%, 63%, 0.4);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: hsl(223, 87%, 73%);
+}
+
+@media (min-width: 750px) {
+    .email,
+    .btn {
+        padding: 1.8rem 3rem;
+        font-size: 1.6rem;
+    }
+
+    .email {
+        margin-right: 2rem;
+    }
+
+    .btn-primary {
+        max-width: 200px;
+        margin-bottom: 8.5rem;
+    }
+}
+
+/* form validation */
+
+.error-message {
+    display: none;
+    color: var(--clr-red);
+    font-style: oblique;
+    margin-bottom: 2.3rem;
+}
+
+.form.error .email {
+    border-color: var(--clr-red);
+    margin-bottom: 0.5rem;
+}
+
+.form.error .error-message {
+    display: block;
+}
+
+.form.error .btn-primary {
+    margin-bottom: 4rem;
+}
+
+@media (min-width: 750px) {
+    .form.error {
+        position: relative;
+    }
+
+    .form.error .error-message {
+        font-size: 1.3rem;
+        position: absolute;
+        top: 6.5rem;
+        left: 4.5rem;
+    }
+
+    .form.error .btn-primary {
+        margin-bottom: 8.5rem;
+    }
+}
+
+/* footer */
+
+.social {
+    display: flex;
+    margin: 12rem auto 2.8rem auto;
+    justify-content: space-around;
+    align-items: center;
+    width: 130px;
+    /* height: 50px; */
+}
+
+@media (min-width: 750px) {
+    .social {
+        margin: 6.5rem auto 2.8rem auto;
+    }
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+
+    font-size: 1.5rem;
+    color: var(--clr-blue-600);
+    border-radius: 50%;
+    border: 1px solid hsl(223, 100%, 88%, 0.5);
+}
+
+.social-link:hover,
+.social-link:focus {
+    color: white;
+    background-color: var(--clr-blue-600);
+}
+
+.fineprint {
+    color: var(--clr-gray);
+}
+
+@media (min-width: 750px) {
+    .fineprint {
+        font-size: 1.2rem;
+    }
+}
